@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AuthProvider } from "./context/AuthProvider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProtectedLayout } from "./components/ProtectedLayout";
+import { Login } from "./components/Login";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                             </ProtectedLayout>
                         }
                     />
-                    <Route path="/login" />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </BrowserRouter>
         </AuthProvider>
